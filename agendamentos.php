@@ -16,7 +16,7 @@
         header('Location: login.php');
     } 
     $cliente=$_GET['id'];
-    
+
     //ligaçãi à base de dados
     $mysqli = new mysqli("localhost","root","","pw1_bd_tralhaexpress");
     // Check connection
@@ -39,17 +39,28 @@
     <section id="perfil" class="cliente">
         <div class="navbar">
             <div class="logo">TRALHA.EXPRESS</div>
-            <div class="links">
-                <a class="btn" href="cliente.php?id='.$cliente.'">voltar</a>
-                <a class="btn-second" href="login.php">Sair</a>
-            </div>
+
+            <?php
+
+                echo '
+                <div class="links">
+                    <a class="btn" href="cliente.php?id='.$cliente.'">voltar</a>
+                    <a class="btn-second" href="login.php">Sair</a>
+                </div>
+                '
+            ?>
+
         </div>
+
         <div class="agendamentos-area">
             
             
-
-            
         </div>
     </section>  
+
+
+
+
+
 </body>
 </html>
