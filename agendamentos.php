@@ -25,16 +25,17 @@
         exit(); // ou  die()
     }
     
-    
+    //buscar agendas na base de dados
+    $sql_agendamentos = "SELECT * FROM agendamentos WHERE id_cliente='$cliente' ORDER BY data_agenda ASC "; 
+    $result_agendamentos=mysqli_query($mysqli,$sql_agendamentos);
+    if (!$result_agendamentos) {
+        die("Erro na instrução sql de agendamentos...");
+    }
+
+    //ver quantos registos tem na tabela
+    //print_r($result_agendamentos);
     
     ?>
-
-
-
-
-
-
-
 
     <section id="perfil" class="cliente">
         <div class="navbar">
@@ -49,12 +50,58 @@
                 </div>
                 '
             ?>
-
+    
         </div>
 
         <div class="agendamentos-area">
+
+            <div class="agendamentos-table">
+
+                <table>
+
+               
+
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>Data</th>
+                        <th>Morada</th>
+                        <th>Tipo</th>
+                        <th>OBS</th>
+                        <th>Funcionario</th>
+                        <th>Gerente</th>
+                        <th>...</th>
+                        <th>...</th>
+                    </tr>
+
+                </thead>   
+                <tbody>
+
+                    <?php
+                    
+                        while($agenda_data = mysqli_fetch_assoc($result_agendamentos)) {
+
+                            echo "<tr><br>";
+                            echo "<td>".$agenda_data['id_agenda']."</td>";
+                            echo "<td>".$agenda_data['data_agenda']."</td>";
+                            echo "<td>".$agenda_data['morada_agenda']."</td>";
+                            echo "<td>".$agenda_data['tipo_agenda']."</td>";
+                            echo "<td>".$agenda_data['obs_agenda']."</td>";
+                            echo "</tr>";
+
+                        }
+                    
+                    ?>
+
+                </tbody>
+
+                </table>
+
+            </div>
             
-            
+         
+
         </div>
     </section>  
 

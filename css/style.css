@@ -269,20 +269,47 @@ select, textarea{
 
 .agendamentos-area{
     padding-top: 135px;
-    margin: 0 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.agendamentos-area form {
-    max-width: 200px;
+table {
+    overflow: hidden;
+    border-radius: 14px;
 }
 
-.agendamentos-area input {
+.agendamentos-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.agendamentos-table  thead tr {
+    background: var(--bg-btn-color);
+    color: #fff;
     text-align: center;
+    font-weight: bold;
+    
 }
 
+.agendamentos-table th,
+.agendamentos-table td {
+    padding: 12px 15px;
+    
+}
+
+.agendamentos-table tbody tr {
+    border-bottom: 1px solid var(--bg-btn-color);
+}
+
+.agendamentos-table tbody tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+.agendamentos-table tbody tr:last-of-type {
+    border-bottom: 2px solid yellow ;
+}
 
 /*animation*/
 
