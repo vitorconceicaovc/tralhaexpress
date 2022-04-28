@@ -10,6 +10,7 @@ body {
     --bg-color-gradient: linear-gradient(90deg, rgba(77, 181, 255, 0.137) 0%, rgba(31,31,56,1) 100%);
     --bg-btn-color:#4db5ff;
     --btn-color: #1f1f38;
+    --table-light: #4db1f84b;
 
     --bg-placeholder: rgb(224, 224, 224);
     --bg-wite: #eee;
@@ -234,6 +235,7 @@ form input::placeholder {
     border: 8px solid var(--bg-wite);
     object-fit: cover;
     background: var(--bg-wite);
+    cursor: pointer;
 }
 
 .cliente form {
@@ -242,6 +244,7 @@ form input::placeholder {
 
 .cliente img {
     z-index: 2;
+    cursor: pointer;
 }
 
 .cliente form p {
@@ -277,7 +280,8 @@ select, textarea{
 
 table {
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-btn-color);
 }
 
 .agendamentos-table {
@@ -301,10 +305,19 @@ table {
 
 .agendamentos-table tbody tr {
     border-bottom: 1px solid var(--bg-btn-color);
+    color: #fff;
+    
+}
+
+.agendamentos-table tbody tr:hover {
+    border-bottom: 1px solid var(--bg-btn-color);
+    color: #fff;
+    transition: var(--transition);
+    background: var(--bg-btn-color);
 }
 
 .agendamentos-table tbody tr:nth-of-type(even) {
-    background-color: gray;
+    background-color: var(--table-light);
 }
 
 .agendamentos-table tbody tr:last-of-type {

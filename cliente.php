@@ -135,7 +135,7 @@
             </div>
             <div class="profile-area">
                 
-                <img src="img/profile_2.jpg" alt="">
+                <img src="img/profile_2.png" alt="">
     
                 <form action="cliente.php?id='.$cliente.'" method="post">
                     <p></p>
