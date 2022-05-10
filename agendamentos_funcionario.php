@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Agendamentos | Cliente</title>
+    <title>Agendamentos | Funcionario</title>
 </head>
 <body>
 
@@ -26,7 +26,7 @@
     }
     
     //buscar agendas na base de dados
-    $sql_agendamentos = "SELECT * FROM agendamentos WHERE id_cliente='$cliente' ORDER BY data_agenda ASC "; 
+    $sql_agendamentos = "SELECT * FROM agendamentos WHERE id_funcionario='$cliente' ORDER BY data_agenda ASC "; 
     $result_agendamentos=mysqli_query($mysqli,$sql_agendamentos);
     if (!$result_agendamentos) {
         die("Erro na instrução sql de agendamentos...");
@@ -50,7 +50,7 @@
 
                 echo '
                 <div class="links">
-                    <a class="btn" href="cliente.php?id='.$cliente.'">voltar</a>
+                    <a class="btn" href="funcionario.php?id='.$cliente.'">voltar</a>
                     <a class="btn-second" href="login.php">Sair</a>
                 </div>
                 '
@@ -93,8 +93,6 @@
                             echo "<td>".$agenda_data['morada_agenda']."</td>";
                             echo "<td>".$agenda_data['tipo_agenda']."</td>";
                             echo "<td>".$agenda_data['obs_agenda']."</td>";
-                            echo "<td>".$agenda_data['id_funcionario']."</td>";
-                            echo "<td>".$agenda_data['id_gerente']."</td>";
                             echo "</tr>";
 
                         }
