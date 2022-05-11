@@ -72,6 +72,37 @@
                 echo '<div class="popup" onClick="closePopup()"><p>Erro a efectuar o LogIn</p><i class="fa-solid fa-circle-xmark"></i></div>';
             }
         }
+
+        //vereficar se foi clicado submit para funcionario
+        if(isset($_POST['gerente'])) {
+            //ligaçãi à base de dados
+            $mysqli = new mysqli("localhost","root","","pw1_bd_tralhaexpress");
+            // Check connection
+            if ($mysqli -> connect_errno) {
+                echo "Falha a ligar à base de dados: " . $mysqli -> connect_error;
+                exit(); // ou  die()
+            }
+            //receber dados do html
+            $email=$_POST['email'];
+            $senha=$_POST['senha'];
+            //criar a instrução sql
+            $sql="SELECT * FROM gerentes WHERE email_gerente='$email' AND senha=md5('$senha')";
+            $result=mysqli_query($mysqli,$sql);
+            if (!$result) {
+                die("Erro na instrução sql...");
+            }
+            //vereficar se login está correto
+            $count=mysqli_num_rows($result);
+            $linha=mysqli_fetch_array($result);
+            $id_gerente=$linha['id_gerente'];
+            if($count==1) {
+                echo '<div class="popup" onClick="closePopup()"><p>Login efetuado com sucesso, aguarde...</p><i class="fa-solid fa-circle-xmark"></i></div>';
+                header('refresh:3;url=gerente.php?id='.$id_gerente);
+            }
+            else {
+                echo '<div class="popup" onClick="closePopup()"><p>Erro a efectuar o LogIn</p><i class="fa-solid fa-circle-xmark"></i></div>';
+            }
+        }
     ?>
 
     <section class="login">
@@ -117,7 +148,7 @@
             <input type="email" placeholder="Email" name="email" required>
             <input type="password" placeholder="Senha" name="senha" required>
             <small><a href="registar.php">Ainda não tem uma conta?</a></small>
-            <button class="btn-form" type="submit">LOG IN</button>
+            <button class="btn-form" type="submit" name="gerente">LOG IN</button>
         </form>
         <a class="btn-second" href="index.php">Voltar</a>
     </section>
