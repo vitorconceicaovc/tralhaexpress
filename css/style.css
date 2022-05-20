@@ -360,6 +360,30 @@ table {
     border-bottom: 2px solid yellow ;
 }
 
+.agendamentos-table i {
+    cursor: pointer;
+    padding: 10px;
+    background: var(--bg-btn-color);
+    border-radius: 5px;
+    color: var(--bg-wite);
+    border: 1px solid var(--bg-btn-color);
+}
+
+.agendamentos-table i:hover {
+    background: var(--bg-color);
+}
+
+.editar-area {
+    padding-top: 200px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /*animation*/
 
 @keyframes slide {

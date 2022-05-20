@@ -99,6 +99,8 @@
                 <div class="links">
                     <a onclick="perfil()" class="active" href="#perfil">Perfil</a>
                     <a onclick="servicos()" href="agendamentos_gerente.php?id='.$cliente.'">Agendamentos</a>
+                    <a onclick="servicos()" href="clientes.php?id='.$cliente.'">Clientes</a>
+                    <a onclick="servicos()" href="funcionarios.php?id='.$cliente.'">Funcionários</a>
                     <a class="btn-second" href="login.php">Sair</a>
                 </div>
             </div>

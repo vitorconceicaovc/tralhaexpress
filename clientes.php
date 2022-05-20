@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Agendamentos | Gerente</title>
+    <title>Lista de Clientes</title>
 </head>
 <body>
 
@@ -26,7 +26,7 @@
     }
     
     //buscar agendas na base de dados
-    $sql_agendamentos = "SELECT * FROM agendamentos ORDER BY data_agenda ASC "; 
+    $sql_agendamentos = "SELECT * FROM clientes ORDER BY id_cliente ASC "; 
     $result_agendamentos=mysqli_query($mysqli,$sql_agendamentos);
     if (!$result_agendamentos) {
         die("Erro na instrução sql de agendamentos...");
@@ -69,15 +69,11 @@
                 <thead>
 
                     <tr>
-                        <th>#</th>
-                        <th>Data</th>
-                        <th>Morada</th>
-                        <th>Tipo</th>
-                        <th>OBS</th>
-                        <th>Funcionario</th>
-                        <th>Gerente</th>
-                        <th>Estado</th>
-                        <th>Editar</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Contacto</th>
+                        <th>Foto</th>
                     </tr>
 
                 </thead>   
@@ -88,15 +84,11 @@
                         while($agenda_data = mysqli_fetch_assoc($result_agendamentos)) {
 
                             echo "<tr><br>";
-                            echo "<td>".$agenda_data['id_agenda']."</td>";
-                            echo "<td>".$agenda_data['data_agenda']."</td>";
-                            echo "<td>".$agenda_data['morada_agenda']."</td>";
-                            echo "<td>".$agenda_data['tipo_agenda']."</td>";
-                            echo "<td>".$agenda_data['obs_agenda']."</td>";
-                            echo "<td>".$agenda_data['id_funcionario']."</td>";
-                            echo "<td>".$agenda_data['id_gerente']."</td>";
-                            echo "<td>".$agenda_data['estado_agenda']."</td>";
-                            echo "<td><i class='fa-solid fa-marker'></i></td>";
+                            echo "<td>".$agenda_data['id_cliente']."</td>";
+                            echo "<td>".$agenda_data['nome_cliente']."</td>";
+                            echo "<td>".$agenda_data['email_cliente']."</td>";
+                            echo "<td>".$agenda_data['contacto_cliente']."</td>";
+                            echo "<td>".$agenda_data['foto_cliente']."</td>";
                             echo "</tr>";
 
                         }

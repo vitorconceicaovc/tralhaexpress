@@ -69,15 +69,15 @@
                 <thead>
 
                     <tr>
-                        <th>#</th>
+                        <th>ID</th>
                         <th>Data</th>
                         <th>Morada</th>
                         <th>Tipo</th>
                         <th>OBS</th>
                         <th>Funcionario</th>
                         <th>Gerente</th>
-                        <th>...</th>
-                        <th>...</th>
+                        <th>Estado</th>
+                        <th>Editar</th>
                     </tr>
 
                 </thead>   
@@ -95,6 +95,8 @@
                             echo "<td>".$agenda_data['obs_agenda']."</td>";
                             echo "<td>".$agenda_data['id_funcionario']."</td>";
                             echo "<td>".$agenda_data['id_gerente']."</td>";
+                            echo "<td>".$agenda_data['estado_agenda']."</td>";
+                            echo "<td><a href='editar.php?id=$agenda_data[id_agenda]'><i class='fa-solid fa-marker'></i></a></td>";
                             echo "</tr>";
 
                         }

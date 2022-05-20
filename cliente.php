@@ -43,10 +43,11 @@
         $contacto=$_POST['contacto'];        
         $email=$_POST['email'];   
         $senha=md5($_POST['senha']);
+        
 
         //instrução sql para atualizar dados 
         $sql="UPDATE clientes SET 
-        email_cliente='$email',contacto_cliente='$contacto'
+        email_cliente='$email',contacto_cliente='$contacto',senha='$senha'
         WHERE nome_cliente='$nome'";
 
         $result=mysqli_query($mysqli,$sql);
@@ -79,6 +80,7 @@
         $morada=$_POST['morada'];        
         $tipo=$_POST['tipo'];   
         $obs=$_POST['obs'];  
+        
 
         //criar a instrução para inserir agendamento
         $sql_agenda="INSERT INTO agendamentos(data_agenda,morada_agenda,tipo_agenda,obs_agenda,id_cliente) 
@@ -149,7 +151,7 @@
                 <form action="cliente.php?id='.$cliente.'" method="post">
                     <p></p>
                     <div class="roud">
-                        <input type="file" name="">
+                        <input type="file" name="foto">
                         <i class="fas fa-upload"></i>
                     </div>
                     <input class="blocked" type="text" name="nome" placeholder="Nome" value="'.$linha['nome_cliente'].'" readonly>
