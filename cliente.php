@@ -95,13 +95,7 @@
 
     }
 
-    function foto() {
-        echo '<div class="popup" onClick="closePopup()"><p>Foto atualizada com sucesso.</p><i class="fa-solid fa-circle-xmark"></i></div>';
-    }
-
-    if (isset($_POST['foto'])) {
-        foto();
-    }
+    
 
     if(isset($_POST['update'])) {
         atualizar();

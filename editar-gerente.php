@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Editar agenda | Cliente</title>
+    <title>Editar agenda | Gerente</title>
 </head>
 <body>
 
@@ -76,16 +76,15 @@
                 }
         
                 //receber os dados do form
-                $data=$_POST['data'];   
-                $morada=$_POST['morada'];        
-                $tipo=$_POST['tipo'];   
-                $obs=$_POST['obs'];
+                $estado=$_POST['estado'];   
+                $funcionario=$_POST['funcionario'];        
+                $gerente=$_POST['gerente'];   
                 $cliente=$_GET['id'];
                 
         
                 //instrução sql para atualizar dados 
                 $sql="UPDATE agendamentos SET 
-                data_agenda='$data',morada_agenda='$morada',tipo_agenda='$tipo',obs_agenda='$obs'
+                estado_agenda='$estado',id_funcionario='$funcionario',id_gerente='$gerente'
                 WHERE id_agenda='$cliente'";
         
                 $result=mysqli_query($mysqli,$sql);
@@ -111,19 +110,22 @@
 
                 echo '
             
-                <form action="editar.php?id='.$cliente.'" method="post">
+                <form action="editar-gerente.php?id='.$cliente.'" method="post">
                     
                     
                     <input class="blocked" type="text" name="id" placeholder="Nome" value="ID da agenda: '.$linha['id_agenda'].'" readonly>
-                    <input type="datetime-local" name="data" value="'.$linha['data_agenda'].'" >
-                    <input type="text" name="morada" value="'.$linha['morada_agenda'].'" >
-                    <select name="tipo" id="">
-                    <option>'.$linha['tipo_agenda'].'</option>
-                        <option>Transportes</option>
-                        <option>Remodelação</option>
-                        <option>Decoração</option>
+                   
+                   
+                    <select name="estado" id="">
+                        <option>'.$linha['estado_agenda'].'</option>
+                        <option>Agendado</option>
+                        <option>Em serviço</option>
+                        <option>Concluido</option>
                     </select>
-                    <textarea type="text" name="obs" placeholder="'.$linha['obs_agenda'].'" ></textarea>
+
+                    <input type="text" name="funcionario" value="'.$linha['id_funcionario'].'" >
+                    <input type="text" name="gerente" value="'.$linha['id_gerente'].'" >
+
                     <input class="btn-form" type="submit" value="Atualizar" name="update" >
 
                 </form>

@@ -76,8 +76,8 @@
                         <th>OBS</th>
                         <th>Funcionario</th>
                         <th>Gerente</th>
-                        <th>...</th>
-                        <th>...</th>
+                        
+                        
                     </tr>
 
                 </thead>   
@@ -93,6 +93,8 @@
                             echo "<td>".$agenda_data['morada_agenda']."</td>";
                             echo "<td>".$agenda_data['tipo_agenda']."</td>";
                             echo "<td>".$agenda_data['obs_agenda']."</td>";
+                            echo "<td>".$agenda_data['id_funcionario']."</td>";
+                            echo "<td>".$agenda_data['id_gerente']."</td>";
                             echo "</tr>";
 
                         }

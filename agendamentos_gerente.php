@@ -96,7 +96,7 @@
                             echo "<td>".$agenda_data['id_funcionario']."</td>";
                             echo "<td>".$agenda_data['id_gerente']."</td>";
                             echo "<td>".$agenda_data['estado_agenda']."</td>";
-                            echo "<td><i class='fa-solid fa-marker'></i></td>";
+                            echo "<td><a href='editar-gerente.php?id=$agenda_data[id_agenda]'><i class='fa-solid fa-marker'></i></a></td>";
                             echo "</tr>";
 
                         }
