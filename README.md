@@ -4,6 +4,7 @@
 <p align="center">
     <a href="#about">About</a> |
     <a href="#features">Features</a> |
+    <a href="#technologies">Technologies</a> |
 
 </p>
 
@@ -27,6 +28,12 @@
     - [ ] Photo upload
 - [x] Scheduling
 
+
+
+# Technologies
+- Javascript
+- php
+- SQL
 
 ---
 Made with 💜 by Vítor Conceição ▶ [See my LinkdIn](https://www.linkedin.com/in/v%C3%ADtor-concei%C3%A7%C3%A3o-707404227/)
