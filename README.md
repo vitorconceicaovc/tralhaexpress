@@ -5,8 +5,8 @@
     <a href="#about">About</a> |
     <a href="#features">Features</a> |
     <a href="#technologies">Technologies</a> |
-    <a href="#requirements">Requirements</a> 
-
+    <a href="#requirements">Requirements</a> | 
+    <a href="#installation">Installation</a> 
 </p>
 
 <h4 align="center">
@@ -43,6 +43,25 @@
     - Intel Core i5 or i7 processor. 
     - Full HD resolution, ideally 1920×1080. 
     - 8GB of RAM.
+
+# Installation
+I - Install a [Source code editor](https://code.visualstudio.com/) and [XAMPP](https://www.apachefriends.org/index.html).
+<br>
+II - [Download](https://github.com/vitorconceicaovc/tralhaexpress/archive/refs/heads/main.zip) this project.
+<br>
+III - Unzip the project and and save in htdocs folder. Exemple:   
+```bash 
+C:\xampp\htdocs\projectfolder
+```
+IV - Import the file "pw1_bd_tralhaexpress" in to sql
+<br>
+V - Start a Apache and MySQL on XAMPP Control Panel
+<br>
+VI - Open a browser and enter:
+```bash 
+http://localhost/projectfolder
+```
+
 
 
 ---
