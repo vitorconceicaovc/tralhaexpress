@@ -2,7 +2,7 @@
 <p align="center">Service management for transport and moving company</p>
 
 <p align="center">
-    <a href="#sobre">About</a> |
+    <a href="#about">About</a> |
     <a href="#features">Features</a> |
 
 </p>
@@ -24,4 +24,9 @@
 - [x] Login system
 - [x] Registration system
 - [x] Profile management
+    - [] Photo upload
 - [x] Scheduling
+
+
+---
+Made with 💜 by Vítor Conceição ▶ [See my LinkdIn](https://www.linkedin.com/in/v%C3%ADtor-concei%C3%A7%C3%A3o-707404227/)
