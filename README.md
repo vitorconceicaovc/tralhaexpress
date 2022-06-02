@@ -24,7 +24,7 @@
 - [x] Login system
 - [x] Registration system
 - [x] Profile management
-- [] Photo upload
+    - [ ] Photo upload
 - [x] Scheduling
 
 
