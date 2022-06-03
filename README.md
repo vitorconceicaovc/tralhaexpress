@@ -13,6 +13,8 @@
    📢 project under development 📢 
 </h4>
 
+<img src="img/image.png" alt="">
+
 <br>
 
 # About

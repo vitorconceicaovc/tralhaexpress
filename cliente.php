@@ -10,7 +10,7 @@
 </head>
 <body>
 
-
+    
 
     <?php
     
@@ -140,7 +140,7 @@
             <div class="profile-area">
                 
                 
-                <img src="'.$linha['foto_cliente'].'" alt="">
+                <img src="img/profile_2.png" alt="">
     
                 <form action="cliente.php?id='.$cliente.'" method="post">
                     <p></p>
