@@ -53,9 +53,9 @@ III - Unzip the project and and save in htdocs folder. Exemple:
 ```bash 
 C:\xampp\htdocs\projectfolder
 ```
-IV - Import the file "pw1_bd_tralhaexpress" in to sql
+IV - Open folder "dataBase" and import the file "pw1_bd_tralhaexpress" in to sql.
 <br>
-V - Start a Apache and MySQL on XAMPP Control Panel
+V - Start a Apache and MySQL on XAMPP Control Panel.
 <br>
 VI - Open a browser and enter:
 ```bash 
